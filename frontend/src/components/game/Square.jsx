@@ -1,6 +1,6 @@
 import { useState } from "react"
 import style from "./style/square.module.css"
-export default function Square({keyValue}) {
+export default function Square() {
     const [number, setNumber] = useState(0)
     function isValid(e) {
         const content = e.target.textContent.trim()
@@ -12,7 +12,7 @@ export default function Square({keyValue}) {
         }
     }
     return(
-        <div className={style.child} contentEditable="true" onBlur={isValid} key={keyValue} onChange={(e) => setNumber(e.target.textContent)}>
+        <div className={style.child} contentEditable="true" onBlur={isValid} onChange={(e) => setNumber(e.target.textContent)}>
         </div>
     )
 }

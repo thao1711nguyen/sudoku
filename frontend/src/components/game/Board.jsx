@@ -4,13 +4,13 @@ export default function Board() {
     const size=9
     const board=[]
     for(let i=0; i<size; i++) {
-        board.push(size+1)
+        board.push(i)
     }
     return(
         <div className={style.container}>
             { board.map((item) => {
                 return (
-                    <SmallBoard order={item}/>
+                    <SmallBoard order={item+1} key={item} />
                 ) 
             })}
         </div>

@@ -10,7 +10,7 @@ export default function SmallBoard({order}) {
         <div className={style.container}>
             { board.map((square) => {
                 return (
-                    <Square keyValue={order*square} />
+                    <Square key={order*10 + square} />
                 )
             })}
         </div>
