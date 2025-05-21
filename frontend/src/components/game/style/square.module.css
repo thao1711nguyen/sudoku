@@ -15,3 +15,6 @@
 .error {
     color: red;
 }
+input[type="text"] {
+    all: unset;
+}
